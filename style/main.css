@@ -1,0 +1,636 @@
+/*====================
+=======Structure======
+======================*/
+/**
+{outline: 1px red solid;}
+*/
+body{
+    background-color: rgb(255 255 255);
+    display:flex; 
+    flex-direction:column;    
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    height: 10vh;
+    justify-content: start;
+    padding: 0em, 2%
+}
+
+.header-ante-titulo{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(216, 216, 216);
+    flex-wrap: wrap;
+    width: 60%;
+    height: 3vh;
+    padding: 0 20%;
+}
+
+.ante-titulo-list{
+    margin:auto 0;
+
+}
+
+.ante-titulo-list ul{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.ante-titulo-list ul li:first-child{
+    color:rgb(207, 0, 0);
+    font-family: "Roboto";
+    margin: 0;
+}
+.ante-titulo-list ul li{
+    font-family: "Roboto";
+    margin: 0 0.5em;
+}
+
+.islas{
+    display: flex;
+    justify-content: space-between;
+    margin:auto 0;
+    font-family: "Roboto";
+}
+
+.islas p{
+    font-family: "Roboto";
+    margin: 0 0.5em;
+}
+
+.header-element {
+    width: 60%;
+    padding: 1em 20% 0.5em 20%;
+    background-color: rgb(207, 0, 0);
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.hamburguer__button{
+    background: none;
+    border: none;
+	color: inherit;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    outline: inherit;
+    padding: 0;
+    position: relative;
+    text-indent: -9999px;
+    width: 2rem;
+}
+
+.hamburguer__button:before, .hamburguer__button:after,
+.hamburguer__button span:before,
+.hamburguer__button span:after{
+    background-color: white;
+    border-radius: 15px;
+    content: "";
+    display: block;
+    height: 8%;
+    opacity: 1;
+    position: absolute;
+    transition: ease-in-out all 0.15s;
+    width: 100%;
+}
+
+.hamburguer__button:before{
+    top: 30%;
+}
+
+.hamburguer__button:after{
+    bottom: 30%;
+}
+
+.hamburguer__button span:before,
+.hamburguer__button span:after {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburguer__button.-active:before, .hamburguer.--active:after{
+    opacity: 0;
+}
+
+.hamburguer__button.--active:before{
+    display: none;
+}
+
+.hamburguer__button.--active:after{
+    display: none;
+}
+
+.hamburguer__button.--active span:before{
+    transform: rotate(45deg);
+}
+
+.hamburguer__button.--active span:after{
+    transform: rotate(-45deg);
+}
+
+.header-element-title svg{
+    width: 100%;
+}
+
+.header-element-title svg path{
+    fill: rgb(255, 255, 255);
+}
+
+.usuario{
+    display: flex;
+    justify-content: flex-start;
+    margin:auto 0;
+}
+
+.iniciar-sesion{
+    margin-right: 0.5em;
+     
+}
+
+.iniciar-sesion button{
+    background-color: rgb(230, 230, 230);
+    border-color: rgb(230, 230, 230);
+    border-radius: 0.5vh;
+    border:none;
+    cursor: pointer;
+    padding: 0.2em;
+}
+
+.iniciar-sesion span{
+    display: inline;
+    vertical-align: super;
+}
+
+/*usando en width el % hace que se deforme el boton, por eso usamos em con width*/
+.iniciar-sesion button svg{
+    width: 1.5em;
+}
+
+.registrarse button{
+    padding: 0.4em;
+    margin-top: 0.2em;
+    background-color:rgb(255, 199, 0);
+    border-color: rgb(255, 199, 0);
+    border-radius: 0.5vh;  
+    cursor: pointer;  
+    border:none;
+}
+
+.registrarse span{
+    font-family: 'Times New Roman';
+    font-style: italic;
+}
+
+.desplegable {
+    position: fixed;
+    width: 30%;
+    margin-left: 20%;
+    margin-top: 11.2vh;
+    background-color:rgb(46, 46, 46);
+    border-top-color: white;
+}
+
+.desplegable ul {
+    border-top-color:white;
+}
+.desplegable li{
+    font-family: "Roboto";
+    padding: 0.6em 3%;
+    color:white;
+  
+}
+
+.desplegable li:first-child{
+    background-color: rgb(51, 51, 51)
+}
+.desplegable li input{
+    background-color: rgb(51, 51, 51);
+    border:none;
+    width: 95.5%;
+}
+.desplegable li svg{
+    width: 1em;
+    fill:white;
+}
+
+.desplegable li
+
+.menu{
+    width: 60%;
+    padding: 0.5em 20%;
+    background-color: rgb(216, 216, 216);
+}
+
+.menu ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu li{
+    display: inline;
+    font-family: "Roboto Condensed";
+    font-size: 1em;
+    font-weight: 700;
+    margin: auto 0;
+}
+
+.menu li svg{
+    width: 1.5em;
+    height: 1.5em;
+}
+/*acaba header*/
+main{
+    margin: 6em 0;
+    width: 70%;
+    padding: 0em 15%;
+}
+
+.principal{
+    display: flex;
+    justify-content: center;
+    min-width: 80%;
+    max-width: 80%;
+    margin-bottom: 3em;
+}
+
+.principal-noticia{
+    width: 80%;
+}
+
+.tres-columnas{
+    min-width: 70%;
+    max-width: 70%;
+    display: flex;
+    padding: 0 20% 3em 5%;    
+}
+
+.seccion-noticias{
+    min-width: 95%;
+    max-width: 95%;
+    padding: 0 10% 0 5%;
+}
+
+footer{
+    margin-top: auto; 
+    width: 100%;
+}
+
+
+/*====================
+======Typography======
+======================*/
+
+h1{
+    color: rgb(255, 255, 255);
+}
+h2, h3, h4, h5, h6, a, p {
+    color: rgb(0, 0, 0);
+}
+
+h1, h2, h3, h4 {
+    font-family: "Roboto";
+}
+
+h5, h6 {
+    font-family: "Roboto Condensed";
+}
+
+a, td, p, button, label{
+    font-family: "Roboto Condensed";
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.principal-noticia h2{
+    font-size: 2em;
+}
+
+.ante-titulo-list li{
+    display: inline;
+    font-family: "Roboto Condensed";
+    font-size: 0.8em;
+}
+
+h4 {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a {
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 300ms;
+}
+
+a:focus, a:hover {
+    outline: none;
+    outline-offset: 0;
+    text-decoration: none;
+}
+
+.subseccion p{
+    color:rgb(255, 0, 0);
+}
+
+.periodista p{
+    color: rgb(70, 70, 70);
+}
+.islas p{
+    color: rgb(0, 0, 0);
+    font-size: 0.8em;
+}
+
+
+/*====================
+========Image=========
+======================*/
+
+img {
+    max-width: 100%;
+}
+    
+/*====================
+========Logo=========
+======================*/
+
+.logo{
+    width: max-content;
+}
+
+.logo__image svg{
+    height: 3em;
+    width: 3em;
+}
+
+.logo__image svg path{
+    fill:hsl(19, 100%, 50%);
+}
+
+.logo__title{
+    margin-left: 1em;
+}
+
+.logo__title h1{
+    text-align: left;
+}
+
+
+/*====================
+========Subtitle======
+======================*/
+
+.subtitle{
+    background-color: hsl(207, 85%, 69%);
+    padding: 0.2em 0;
+    width: 100%;
+}
+
+.subtitle h2{
+    text-align: center;
+}
+
+
+/*====================
+=========CRUD=========
+======================*/
+
+.tres-columnas .noticia-columna{
+    min-width: 30%;
+    max-width: 30%;
+}
+.tres-columnas img{
+    min-width: 90%;
+    max-width: 90%;
+}
+.tres-columnas h2{
+    font-size: 1em;
+}
+
+.seccion-noticias-title{
+    background-color: white;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+.seccion-noticias-contenedor{
+    min-width: 100%;
+    max-width: 100%;
+    display: flex;
+}
+.seccion-noticias-contenedor .noticia-columna{
+    min-width: 23%;
+    max-width: 23%;
+}
+
+.seccion-noticias-contenedor img{
+    min-width: 90%;
+    max-width: 90%;
+}
+
+.seccion-noticias-contenedor h2{
+    font-size: 1em;
+    font-family: "Ubuntu Condensed";
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.crud{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-element{
+    width: 100%;
+}
+
+.footer-element p{
+    text-align: center;
+}
+
+.footer-element p:hover{
+    color: rgb(165, 96, 255)
+}
+
+/*====================
+======PUBLICIDAD======
+======================*/
+.publicidad-superior{
+    border: 0;
+    width: 80%;
+    height:18em;
+}
+
+.principal-publicidad{
+   width: 5%;
+   height: 40em;
+   margin: 0;
+
+}
+
+@media (max-width:479px) {
+
+    header{
+        height: 2vh;
+    }
+
+    .main-element{
+        margin: 1.5em 0;
+    }
+
+    .footer-element{
+        margin: 1em 0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .logo svg{
+        height: 2em;
+        width: 2em;
+    }
+
+    .title{
+        margin-left: 0.5em;
+    }
+
+    .crud{
+        display: block;
+    }
+
+    .crud__table, .crud__form{
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .crud__table-grid{
+        grid-gap: 0;
+    }
+
+    .crud__table-flex{
+        gap: 0;
+    }
+
+    .crud__store-button{
+        font-size: 1em;
+        margin-top: 0.5em;
+    }
+}
+
+@media (max-width:1024px) {
+
+    header{
+        height: 2vh;
+    }
+
+    .main-element{
+        margin: 1.5em 0;
+    }
+
+    .footer-element{
+        margin: 1em 0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .logo svg{
+        height: 2em;
+        width: 2em;
+    }
+
+    .title{
+        margin-left: 0.5em;
+    }
+
+    .crud{
+        display: block;
+    }
+
+    .crud__table, .crud__form{
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .crud__table-grid{
+        grid-gap: 0;
+    }
+
+    .crud__table-flex{
+        gap: 0;
+    }
+
+    .crud__store-button{
+        font-size: 1em;
+        margin-top: 0.5em;
+    }
+}
+
+@media (min-width: 1920px) {
+
+    h1 {
+        font-size: 3.5em;
+    }
+    
+    h2 {
+        font-size: 3em;
+    }
+
+    .logo svg{
+        height: 4em;
+        width: 4em;
+    }
+
+    .crud__form-label label{
+        font-size: 2em;
+    }
+
+    .crud__form-input input, 
+    .crud__form-input textarea,
+    .crud__form-input select {
+        font-size: 1.5em;
+        padding: 0.3em;
+    }
+
+    .crud__store-button{
+        font-size: 1.5em;
+    }
+
+    .footer-element p{
+        font-size: 1.5em;
+    }
+}
+
+
+
