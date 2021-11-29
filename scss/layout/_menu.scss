@@ -1,0 +1,23 @@
+.menu{
+    width: 60%;
+    padding: 0.5em 20%;
+    background-color:$grey;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu li{
+    display: inline;
+    font-family: $font-stack-condensed;
+    font-size: 1em;
+    font-weight: 700;
+    margin: auto 0;
+}
+
+.menu li svg{
+    width: 1.5em;
+    height: 1.5em;
+}

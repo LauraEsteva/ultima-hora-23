@@ -1,0 +1,62 @@
+
+.header-element {
+    width: 60%;
+    padding: 1em 20% 0.5em 20%;
+    background-color: $color-primary;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.header-element-title svg{
+    width: 100%;
+}
+
+.header-element-title svg path{
+    fill: $white;
+}
+
+.usuario{
+    display: flex;
+    justify-content: flex-start;
+    margin:auto 0;
+}
+
+.iniciar-sesion{
+    margin-right: 0.5em;
+     
+}
+
+.iniciar-sesion button{
+    background-color: $grey;
+    border-color: $grey;
+    border-radius: 0.5vh;
+    border:none;
+    cursor: pointer;
+    padding: 0.2em;
+}
+
+.iniciar-sesion span{
+    display: inline;
+    vertical-align: super;
+}
+
+/*usando en width el % hace que se deforme el boton, por eso usamos em con width*/
+.iniciar-sesion button svg{
+    width: 1.5em;
+}
+
+.registrarse button{
+    padding: 0.4em;
+    margin-top: 0.2em;
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+    border-radius: 0.5vh;  
+    cursor: pointer;  
+    border:none;
+}
+
+.registrarse span{
+    font-family: 'Times New Roman';
+    font-style: italic;
+}

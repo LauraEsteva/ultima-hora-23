@@ -1,0 +1,41 @@
+.header-ante-titulo{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(216, 216, 216);
+    flex-wrap: wrap;
+    width: 60%;
+    height: 3vh;
+    padding: 0 20%;
+}
+
+.ante-titulo-list{
+    margin:auto 0;
+
+}
+
+.ante-titulo-list ul{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.ante-titulo-list ul li:first-child{
+    color: $color-primary;
+    font-family: $font-stack;
+    margin: 0;
+}
+.ante-titulo-list ul li{
+    font-family: $font-stack;
+    margin: 0 0.5em;
+}
+
+.islas{
+    display: flex;
+    justify-content: space-between;
+    margin:auto 0;
+    font-family: $font-stack;
+}
+
+.islas p{
+    font-family: $font-stack;
+    margin: 0 0.5em;
+}

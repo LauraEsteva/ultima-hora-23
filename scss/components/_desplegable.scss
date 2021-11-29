@@ -1,0 +1,32 @@
+.desplegable {
+    position: fixed;
+    width: 30%;
+    margin-left: 20%;
+    margin-top: 11.2vh;
+    background-color: $black-brightest;
+    border-top-color: $white;
+}
+
+.desplegable ul {
+    border-top-color:$white;
+}
+.desplegable li{
+    font-family: $font-stack;
+    padding: 0.6em 3%;
+    color: $white;
+  
+}
+
+.desplegable li:first-child{
+    background-color: $black-brightest;
+}
+.desplegable li input{
+    background-color: $black-brightest;
+    border:none;
+    width: 95.5%;
+}
+.desplegable li svg{
+    width: 1em;
+    fill:$white;
+}
+
