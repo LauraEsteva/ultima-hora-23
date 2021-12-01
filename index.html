@@ -17,8 +17,8 @@
 		<meta property="og:description"   content="" /> 
         -->
 
-        <link href="style/normalize.css" rel="stylesheet">
-        <link href="style/app.css" rel="stylesheet">
+        
+        <link href="css/app.css" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -74,7 +74,8 @@
             </div>
             <!--acaba cabecera roja-->
             <!--empieza menu desplegable-->
-            <div class="desplegable">
+            
+            <div class="desplegable" id="desplegable">
                 <ul>
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
@@ -99,7 +100,11 @@
                     <li>/Contratar publicidad / Contacto/</li>
                 </ul>
             </div>
+            
             <!--acaba menu desplegable-->
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
             <!--empieza menu principal secciones-->
             <div class="menu">
                 <ul>
@@ -128,7 +133,8 @@
             <!--acaba menu principal secciones-->
         </header>
 
-        <main>            
+        <main>
+            <div id="overlay"></div>            
             <!--empieza publicidad superior-->
             <div class="publicidad-superior">
                 <img src="https://tpc.googlesyndication.com/simgad/7039519815729318766" alt="" class="img_ad">                

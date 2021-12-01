@@ -1,10 +1,16 @@
 .desplegable {
     position: fixed;
     width: 30%;
-    margin-left: 20%;
-    margin-top: 11.2vh;
+    left: 20%;
+    top: -70vh;
     background-color: $black-brightest;
     border-top-color: $white;
+    transition: 0.4s;
+    z-index: 500;
+}
+
+.desplegable.--active{
+    top:14vh;
 }
 
 .desplegable ul {
