@@ -1,5 +1,6 @@
-const hamburguerButton = document.getElementById('hamburguer__button');
 export const hamburguerButton = () => {
+
+    const hamburguerButton = document.getElementById('hamburguer__button');
 
     hamburguerButton.addEventListener('click', () =>  {
 

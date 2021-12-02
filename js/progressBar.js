@@ -1,5 +1,7 @@
-const overlay = document.getElementById('overlay');
 export const overlay = () => {
+
+    const overlay = document.getElementById('overlay');
+
     window.addEventListener("scroll", () => {
 
         let winScroll = document.documentElement.scrollTop;
